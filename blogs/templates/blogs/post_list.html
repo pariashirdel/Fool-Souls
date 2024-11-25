@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Post List{% endblock %}
+
+{% block main %}
+<div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="header-text">
+            <p><h2>Our <em>fool souls</em><br>Experienses and <em>Posts</em></h2>
+            <p>a full list of all the post and experiences shared by our users!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for post in post_list %}
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="{{ post.picture.url }}"><title>Placeholder</title><rect width="100%" height="100%"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{ post.title }}</text></svg>
+              <div class="card-body">
+                <p class="card-text">{{ post.body }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="{% url 'blogs:post-detail' post.pk %}" class="btn btn-secondary my-2">View</a>
+                  </div>
+                  <small class="text-body-secondary">{{ post.created_on }}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

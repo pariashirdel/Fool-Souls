@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="templatemo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'base/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'base/assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'base/assets/css/templatemo-snapx-photography.css' %}">
+    <link rel="stylesheet" href="{% static 'base/assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'base/assets/css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 576 SnapX Photography
+
+https://templatemo.com/tm-576-snapx-photography
+
+-->
+  </head>
+
+<body>
+
+   {% include "base/header.html" %}
+
+   {% block extra %}{% endblock %}
+   {% block main %}{% endblock %}
+
+   {% include "base/footer.html" %}
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'base/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'base/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'base/assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'base/assets/js/owl-carousel.js' %}"></script>
+
+  <script src="{% static 'base/assets/js/tabs.js' %}"></script>
+  <script src="{% static 'base/assets/js/popup.js' %}"></script>
+  <script src="{% static 'base/assets/js/custom.js' %}"></script>
+
+  </body>
+</html>

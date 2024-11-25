@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Users{% endblock %}
+
+
+
+
+{% block main %}
+<div class="main-banner">
+  <div class="container marketing">
+    <div class="row">
+      {% for profile in profile_list %}
+      <div class="col-lg-4">
+        <img class="round-circle post-img" src="{{ profile.avatar.url }}" />
+        <h2 class="fw-normal">{{ profile.user.first_name }} {{ profile.user.last_name }}</h2>
+        <p>{{ profile.bio }}</p>
+        <p><a class="btn btn-secondary" href="{% url 'blogs:profile' profile.pk %}">{{ profile.user }}</a></p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

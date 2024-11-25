@@ -1,0 +1,95 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+Fool Souls
+{% endblock %}
+
+
+{% block main %}
+
+<div class="main-banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="header-text">
+          <p><h2>Where <em>fool souls</em><br>Share their <em>experienses</em></h2>
+          <p>FoolSouls is a website where paria shirdel used a free template to created a darksouls based blog where darksouls or other fromsoftware game character add their experiences and post.</p>
+          <div class="buttons">
+            <div class="big-border-button">
+              <a href="contests.html">See Blogs</a>
+            </div>
+            <div class="icon-button">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="featured-items" id="featured-items">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'base/assets/images/featured-01.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Builds</h4>
+                    <ul>
+                      <li>Share and learn about Character builds.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'base/assets/images/featured-02.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Weapons</h4>
+                    <ul>
+                      <li>Share and learn about Character weapons.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'base/assets/images/featured-03.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>stats</h4>
+                    <ul>
+                      <li>Share and learn about Character stats.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="{% static 'base/assets/images/featured-04.jpg' %}" alt="">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Join us now</h4>
+                    <ul>
+                      <li>Join us now for free and start sharing with other fool souls.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

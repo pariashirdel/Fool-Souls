@@ -1,0 +1,31 @@
+{% load static %}
+
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url "pages:home" %}" class="logo">
+                        <img src="{% static 'base/assets/images/logo.jpg' %}" alt="Fool Souls">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="{% url "pages:home" %}" class="active">Home</a></li>
+                        <li><a href="{% url 'blogs:postlist' %}">posts</a></li>
+                        <li><a href="{% url 'blogs:users' %}">users</a></li>
+                        <li><a href="{% url 'accounts:profile' %}">Your Profile</a></li>
+                    </ul>   
+                    <div class="border-button">
+                      <a id="modal_trigger" href="{% url 'accounts:sign_up' %}" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
+                    </div>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>

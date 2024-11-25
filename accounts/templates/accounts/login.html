@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+{% load bootstrap5 %}
+
+{% block title %}Login{% endblock %}
+
+{% if messages %}
+    {% for message in messages %}
+    	<h3>{{ message }}</h3>
+    {% endfor %}
+{% endif %}
+
+{% block main %}
+<div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="card">
+                <div class="card-body">
+                    <form action="" class="form" method="post">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <button class="btn-success" type="submit">
+                            Done
+                        </button>
+                        <a href="{% url 'accounts:sign_up' %}">No account?Sign up here!</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

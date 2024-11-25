@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load bootstrap5 %}
+
+{% block title %}Register{% endblock %}
+
+{% block main %}
+
+<div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="card">
+                <div class="card-body">
+                    <form action="" class="form" method="post">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <button class="btn-success" type="submit">
+                            Done
+                        </button>
+                        <a href="{% url 'accounts:login' %}">Already have an account?Sign in here!</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
